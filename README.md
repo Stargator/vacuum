@@ -1,14 +1,15 @@
-void
+vacuum
 ====
 
-void is a theme for Pelican. It's pretty much void of all color.
-void uses an older version (1.2) of [Skeleton](http://www.getskeleton.com)
+vacuum is a theme for Jekyll. It's pretty much empty of all color. 
+vacuum uses [Skeleton](http://www.getskeleton.com)
 and [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
 
-Since I'm no designer, you should expect this to be a constant work in
-progress.
+It's based on [void](http://github.com/gjreda/void) for Pelican.
 
-You can see a live example of it [here](http://www.gregreda.com)
+Since I'm reworking an existing project to use Jekyll, the configuration variables are not set in stone.
+
+You can see a live example of the project it's based on [here](http://www.gregreda.com)
 
 Screenshots
 -----------
@@ -18,71 +19,92 @@ Screenshots
 ### Article
 ![Article Page](/examples/article.png)
 
-Example pelicanconf.py
+Example _config.yml
 ----------------------
-```python
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
+```yaml
+# Name of your site (displayed in the header)
+name: 'Example Vacuum Theme'
+title: "Example: What is the title of your site?"
 
-AUTHOR = u'Example Author Name'
-SITENAME = u'Example Void Theme'
-SITEURL = 'http://www.example.com'
-TIMEZONE = 'America/Chicago'
-THEME = 'void/'
-AVATAR = '/theme/images/avatar.jpg'
-TITLE = "Example: What is the title of your site?"
-DESCRIPTION = "Lorem Ipsum something about your site and you too probably."
+# Short bio or description (displayed in the header)
+description: "Lorem Ipsum something about your site and you too probably."
+timezone: America\New_York
 
-ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+# Creator settings
+creator: 'Example Author Name'
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+#  '/theme/images/avatar.jpg'
+avatar_path: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
+avatar_description: # This is my avatar"
 
-# Static Pages
-PAGE_PATHS = ['pages']
-PAGE_URL = '{slug}/'
-PAGE_SAVE_AS = '{slug}/index.html'
-ABOUT_PAGE_HEADER = 'Hello.'
+# Build Settings
+## Conversion
+markdown: kramdown
+highlighter: coderay
+theme: vacuum-jekyll-theme
 
-# DEFAULTS
-DEFAULT_LANG = 'en'
-DEFAULT_CATEGORY = 'misc'
-DEFAULT_DATE = 'fs'
-DEFAULT_DATE_FORMAT = '%b %d, %Y'
-DEFAULT_PAGINATION = False
+## Handling Reading
+safe: false
+encoding: "utf-8"
 
-# FEEDS
-FEED_ALL_ATOM = "feeds/all.atom.xml"
-TAG_FEED_ATOM = "feeds/tag/%s.atom.xml"
+## Filtering Content
+limit_posts: 4
+permalink: /:title/
 
-# PLUGINS
-PLUGIN_PATHS = ['pelican-plugins', 'pelican_dynamic']
-PLUGINS = ['assets', 'liquid_tags.notebook', 'pelican_dynamic', 'render_math']
+# Your website URL (e.g. http://user.github.io)
+# Used for Sitemap.xml and your RSS feed
+url: "http://www.example.com" # the base hostname & protocol for your site
+# If hosting site at a Project repository on GitHub pages
+# (http://username.github.io/repository-name)
+# and NOT the User repository (http://username.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: "" # the subpath of the site, e.g. /blog/
 
-CODE_DIR = 'code'
-NOTEBOOK_DIR = 'notebooks'
-EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+# Front Matter Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: {{ site.creator}}
 
-STATIC_PATHS = ['images', 'code', 'notebooks', 'extra', 'data']
-EXTRA_PATH_METADATA = {'extra/robots.txt': {'path': 'robots.txt'},}
+# About Page Info
+about_page_header: "About Page Header"
+center_image: "images/image.jpg"
 
-NAVIGATION = [
+#
+# Flags below are optional
+#
+
+# List of links for navigation
+navigation: [
     # You probably want to fill these in so they point to your user pages
-    {'site': 'twitter', 'user': '', 'url': 'https://twitter.com/...'},
+    {'site': 'flickr', 'user': '', 'url': 'http://www.flickr.com/...'},
     {'site': 'github', 'user': '', 'url': 'https://github.com/...'},
-    {'site': 'linkedin', 'user': '', 'url': 'http://linkedin.com/in/...'},
     {'site': 'google-plus', 'user': '', 'url': 'https://plus.google.com/...'},
+    {'site': 'instagram', 'user': '', 'url': 'http://www.instagram.com/user/...'},
+    {'site': 'lastfm', 'user': '', 'url': 'http://www.last.fm/user/...'},
+    {'site': 'linkedin', 'user': '', 'url': 'http://linkedin.com/in/...'},
+    {'site': 'pinterest', 'user': '', 'url': 'http://www.pinterest.com/...'},
     {'site': 'spotify', 'user': '', 'url': 'https://open.spotify.com/user/...'},
+    {'site': 'stackoverflow', 'user': '', 'url': 'http://www.stackoverflow.com/user/...'},
+    {'site': 'twitter', 'user': '', 'url': 'https://twitter.com/...'}
 ]
 
-TWITTER_NAME = ""
-TWITTER_CARDS = True
-FACEBOOK_SHARE = True
-HACKER_NEWS_SHARE = True
+show_social:
+  facebook: false
+  twitter: false
 
-#### Analytics
-GOOGLE_ANALYTICS = ''
-DOMAIN = "example.com"
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+#disqus:
 
-# Other
-MAILCHIMP = False
-CACHE_CONTENT = False
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+#google_analytics:
+
+# Feed Settings
+feed:
+  main: /feed/feed.xml
+  tag:  /feed/tag/%s.atom.xml
 ```

@@ -1,11 +1,11 @@
-void
+vacuum
 ====
 
-void is a theme for Pelican. It's pretty much void of all color. 
-void uses an older version (1.2) of [Skeleton](http://www.getskeleton.com) 
+vacuum is a theme for Jekyll. It's pretty much empty of all color. 
+vacuum uses an older version (1.2) of [Skeleton](http://www.getskeleton.com) 
 and [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
 
-Since I'm no designer, you should expect this to be a constant work in 
+Since I'm reworking an existing project to support Ruby, you should expect this to be a constant work in 
 progress.
 
 Screenshots
@@ -17,12 +17,12 @@ Example pelicanconf.py
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-AUTHOR = u'Greg Reda'
-SITENAME = u'Greg Reda'
-EMAIL_ADDRESS = u'gjreda@gmail.com'
-SITEURL = 'http://www.gregreda.com'
+AUTHOR = u'The Author'
+SITENAME = u'The Site'
+EMAIL_ADDRESS = u'example@mail.net'
+SITEURL = 'http://www.jekyllrb.com'
 TIMEZONE = 'America/Chicago'
-THEME = '../pelican-themes/void'
+THEME = '../pelican-themes/vacuum'
 SUMMARY_MAX_LENGTH = 50
 AVATAR = '/theme/images/avatar.jpg'
 TITLE = "Greg Reda: Data scientist in Chicago."
@@ -43,10 +43,6 @@ DEFAULT_PAGINATION = False
 FEED_ALL_ATOM = "feeds/all.atom.xml"
 TAG_FEED_ATOM = "feeds/tag/%s.atom.xml"
 
-# PLUGINS
-PLUGIN_PATHS = ['../pelican-plugins',]
-PLUGINS = ['liquid_tags.notebook', 'pelican_dynamic', 'render_math']
-
 CODE_DIR = 'code'
 NOTEBOOK_DIR = 'notebooks'
 EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
@@ -59,18 +55,18 @@ EXTRA_PATH_METADATA = {'extra/robots.txt': {'path': 'robots.txt'},}
 # Social
 SOCIAL = {}
 TWITTER_CARDS = True
-TWITTER_NAME = "gjreda"
-GITHUB_NAME = 'gjreda'
-LINKEDIN_URL = 'http://linkedin.com/in/gjreda'
+TWITTER_NAME = "userName"
+GITHUB_NAME = 'userName'
+LINKEDIN_URL = 'http://linkedin.com/in/path'
 GOOGLE_PLUS_URL = 'https://plus.google.com/111658599948853828157?rel=author'
-LASTFM_NAME = 'gjreda'
-# DISQUS_SITENAME = 'gregreda'
-# GITTIP_NAME = 'gjreda'
+LASTFM_NAME = 'userName'
+# DISQUS_SITENAME = 'siteName'
+# GITTIP_NAME = 'user'
 
 #### Analytics
 GOOGLE_ANALYTICS = 'UA-34295039-1'
 GOOGLE_ADSENSE = False
-DOMAIN = "gregreda.com"
+DOMAIN = "jekyll.com"
 
 # Other
 MAILCHIMP = True

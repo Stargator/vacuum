@@ -5,35 +5,38 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
-  {% block header %}{% endblock %}
+    <header></header>
 
-	<!-- Basic Page Needs
+    <!-- Basic Page Needs
   ================================================== -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="google-site-verification" content="AgIAQN_qsniIQWOq659Bnhzx-LZts2FdgP1kLgtQg-k" />
-  <meta name="google-site-verification" content="-wneVy0z_MWocNaXikWZzyTe__HZbZDCRfLYEJ1sAg8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="google-site-verification" content="AgIAQN_qsniIQWOq659Bnhzx-LZts2FdgP1kLgtQg-k" />
+    <meta name="google-site-verification" content="-wneVy0z_MWocNaXikWZzyTe__HZbZDCRfLYEJ1sAg8" />
 
-  <title>{% block title %}{% endblock %}</title>
+    <title></title>
 
-  <meta name="description" content="{% block metadesc %}{% endblock %}">
-  <meta name="author" content="{{ AUTHOR }}">
-  <meta name="copyright" content="&copy; Copyright Greg Reda, 2013 to Present">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.creator }}">
+    <meta name="copyright" content="&copy; Copyright {{ site.creator }}, 2015 to Present">
 
-  <!-- Mobile Specific Metas
-  ================================================== -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Fonts 
-  ================================================== -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans|Merriweather|Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <!-- Fonts
+    ================================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Merriweather|Source+Code+Pro' rel='stylesheet' type='text/css'>
 
-  <!-- CSS
-  ================================================== -->
-  {% assets filters="cssmin", output="css/style.min.css", "css/base.css", "css/skeleton.css", "css/layout.css", "css/void.css", "css/pygment.css" %}
-  <link rel="stylesheet" href="/{{ ASSET_URL }}">
-  {% endassets %}
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/skeleton.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/void.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   {% if FEED_ALL_ATOM %}
   <!-- Feeds
@@ -59,28 +62,28 @@
       {% endif %}
   {% endif %}
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="/theme/images/favicon.ico">
-	<link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
 
 </head>
 <body>
-	<!-- Primary Page Layout
-	================================================== -->
-	<div class="container">
-    {% include 'navbar.html' %}
-		<section id="content" class="twelve columns">
-			{% block content %}{% endblock %}
-		</section>
-		{% include 'footer.html' %}
-	</div><!-- container -->
+<!-- Primary Page Layout
+================================================== -->
+<div class="container">
+    {% include navbar.html %}
+    <section id="content" class="twelve columns">
+        {{ content }}
+    </section>
+    {% include footer.html %}
+</div><!-- container -->
 
-	{% include "analytics.html" %}
+    {% include analytics.html %}
 
-  <script type="text/javascript">
+<script type="text/javascript">
     $("a").on('click', function(e) {
       var url = $(this).attr("href");
       console.log(url);
@@ -106,7 +109,7 @@
 {% if TWITTER_NAME or TWITTER_CARDS %}
 <!-- twitter.js
 ==================================================================== -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 {% endif %}
 
 {% if FACEBOOK_SHARE %}

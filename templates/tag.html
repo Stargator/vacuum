@@ -1,16 +1,18 @@
-{% extends 'base.html' %}
-{% block title %}Posts tagged with: {{ tag }}{% endblock %}
-{% block metadesc %}All posts on {{ SITENAME }} tagged with {{ tag }}{% endblock %}
+---
+layout: base
+---
+<title> {{ page.title }} | {{ site.title }}</title>
+<!--{% block metadesc %}All posts on {{ SITENAME }} tagged with {{ tag }}{% endblock %}-->
 
-{% block header %}{% endblock %}
+<header></header>
 
-{% block content %}
+<div>
 
   <h1 class="article-title">Posts tagged with: {{ tag }}</h1>
-  {% for article in articles %}
-    {% if article.status != 'draft' %}
-      <h2 class="article-title pull-left"><a href="/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h2>
-      <h5 class="article-date pull-right">{{ article.date|strftime('%b %d, %Y') }}</h5>
+  {% for post in site.posts %}
+    {% if post.status != 'draft' %}
+      <h2 class="article-title pull-left"><a href="/{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+      <h5 class="article-date pull-right">{{ post.date| date: "%b %d, %Y" }}</h5>
       <hr class="large">
     {% endif %}
   {% endfor %}
@@ -18,4 +20,4 @@
     <a href="/">← Back to Home</a>
   </div>
   <hr class="small"></hr>
-{% endblock %}
+</div>

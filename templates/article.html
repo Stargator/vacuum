@@ -1,9 +1,11 @@
-{% extends 'base.html' %}
-{% block title %}{{ article.title }}{% endblock %}
-{% block metadesc %}{{ article.description|e }}{% endblock %}
-{% block affiliate %}{{ article.affiliate_link|safe }}{% endblock %}
+---
+layout: base
+---
+<title> {{ page.title }} | {{ site.title }}</title>
+<!--{% block metadesc %}{{ article.description|e }}{% endblock %}-->
+<!--{% block affiliate %}{{ article.affiliate_link|safe }}{% endblock %}-->
 
-{% block header %}
+<header>
 <!-- Extra Header for IPython Notebooks
 ================================================== -->
   {% if EXTRA_HEADER %}
@@ -17,15 +19,15 @@
       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file.
      */
   </style>
-{% endblock %}
+</header>
 
 {% block twittercards %}
 	<!-- Facebook Open Graph
   ================================================== -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ article.title }}">
-  <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
-  <meta property="og:description" content="{{ article.description|e }}">
+  <meta property="og:title" content="{{ post.title }}">
+  <meta property="og:url" content="{{ SITEURL }}/{{ post.url }}">
+  <meta property="og:description" content="{{ post.description|e }}">
   <meta property="og:site_name" content="{{ SITENAME }}">
   <meta property="og:image" content="{{ SITEURL }}{{ AVATAR }}">
 
@@ -36,16 +38,16 @@
   <meta name="twitter:creator" content="@{{ TWITTER_NAME }}">
   <meta name="twitter:domain" content="{{ DOMAIN }}">
   <meta name="twitter:image" content="{{ SITEURL }}{{ AVATAR }}">
-  <meta name="twitter:title" content="{{ article.title }}">
-  <meta name="twitter:description" content="{{ article.description|e }}">
+  <meta name="twitter:title" content="{{ post.title }}">
+  <meta name="twitter:description" content="{{ post.description|e }}">
 {% endblock %}
 
 {% block content %}
 
   <!-- Article Headers
   ================================================================== -->
-  <h1 class="article-title"><a href="/{{ article.url }}" title="Permalink to {{ article.title }}">{{article.title}}</a></h1>
-  <h5 class="article-date">{{ article.date|strftime('%B %d, %Y') }}
+  <h1 class="article-title"><a href="/{{ post.url }}" title="Permalink to {{ post.title }}">{{post.title}}</a></h1>
+  <h5 class="article-date">{{ post.date| date: "%B %d, %Y" }}
     {% if article.tags %} | Tags: {% for tag in article.tags %}
         <a class="tag" href="/{{ tag.url }}" rel="tag" title="Posts tagged with {{ article.tag }}">{{ tag }}</a>
       {% endfor %}
@@ -56,7 +58,7 @@
   <!-- Article Content
   ================================================================== -->
   <div class="article-content">
-    {{ article.content }}
+    {{ post.content }}
   </div>
 
   <hr class="small"></hr>
@@ -72,7 +74,7 @@
       <!-- Facebook Sharing
       ================================================================== -->
       <li><div class="fb-share-button"
-          data-href="{{ SITEURL }}/{{ article.url }}"
+          data-href="{{ SITEURL }}/{{ post.url }}"
           data-layout="button_count">
       </div></li>
       {% endif %}

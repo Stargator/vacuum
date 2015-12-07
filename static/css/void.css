@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Merriweather", serif;
 	margin-top: 20px;
 }
-h1 { font-size: 28px; }
+h1 { font-size: 28px; line-height: 1.75;  letter-spacing: -.1rem;}
 h2 { font-size: 24px; }
 h3 { font-size: 20px; }
 h4 { font-size: 18px; }
@@ -80,7 +80,7 @@ nav {
 	line-height: 50px;
 	margin-top: 7px;
 /* ^^^^^
-Because vertically centering things with CSS is a fucking nightmare,
+Because vertically centering things with CSS is a nightmare,
 I'm going to do this the shitty hack way and just specify a margin-top.
 7px = ( .navbar:height - img:height ) / 2 ...
 and I'm rounding down because it looked better.
@@ -154,15 +154,21 @@ hr.small {
 	clear: both;
 	margin-top: 0px !important;
 }
-h1.article-title { line-height: normal; }
+
+h1.article-title {
+	line-height: normal;
+}
+
 .article-date {
 	font-style: italic;
 	margin: 8px 0px 8px;
 }
+
 .article-tags {  }
 .article-summary { clear: both; }
 .article-content { clear: both; overflow: hidden; }
-/*.article-content img { border: 1px solid #222; }*/
+.article-content img { border: 1px solid #222; }
+
 .article-content p {
 	margin: 12px 0px 12px 0px !important;
 	font-family: 'Open Sans', sans-serif;
@@ -173,38 +179,23 @@ h1.article-title { line-height: normal; }
 .article-content ol {
     font-size: 16px;
 }
+
+.article-sharing {
+	margin: 0 auto;
+}
+
 .caption { font-size: 12px !important; }
+
 blockquote {
 	padding: 0px 20px 0px 20px !important;
 	border-left: 2px solid #ddd !important;
 }
-.back-to-home { margin-bottom: 10px; }
+
+.back-to-home {
+	margin-bottom: 10px;
+}
+
 .center { text-align: center; }
-
-
-/* Article Sharing - Social links at bottom
-*********************************************/
-.article-sharing {
-	margin-top: 0 auto;
-	padding-bottom: 10px;
-}
-.article-sharing ul { margin: 0 0 0 0 !important; }
-.article-sharing ul li {
-	margin: 0 0 0 0 !important;
-	display: inline;
-}
-
-
-/* Mailchimp
-**************************************/
-#mc_embed_signup {
-	background: #fff;
-	clear: left;
-	width: 650px;
-}
-
-#mc_embed_signup input.button { visibility: visible !important; }
-
 
 /* Code Formatting
 **************************************/
@@ -222,12 +213,8 @@ code, pre.ipynb {
 	border-radius: 4px;
 }
 
-
-/* Override IPython Notebook Styles
-**************************************/
+/*.text_cell_render { color: #2E2E2E !important; } Override IPyNB style*/
 div.output_stream pre {	font-size: 12px !important; }
-div.output_wrapper { position: static !important; }
-div.cell { margin: 0 !important; }
 
 
 /* Mobile

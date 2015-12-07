@@ -1,45 +1,42 @@
-{% extends 'base.html' %}
-{% block title %}{{ article.title }}{% endblock %}
-{% block metadesc %}{{ article.description|e }}{% endblock %}
-{% block affiliate %}{{ article.affiliate_link|safe }}{% endblock %}
+---
+layout: base
+---
+<title> {{ post.title }} | {{ site.title }}</title>
+<meta name="description" content="{{ post.description|e }}"/>
 
-{% block header %}
-<!-- Extra Header for IPython Notebooks
-================================================== -->
-  {% if EXTRA_HEADER %}
-    {{ EXTRA_HEADER }}
-  {% endif %}
-{% endblock %}
+<header>
+</header>
 
-{% block twittercards %}
+{% if site.show_social.facebook %}
 	<!-- Facebook Open Graph
   ================================================== -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ article.title }}">
-  <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}">
-  <meta property="og:description" content="{{ article.description|e }}">
-  <meta property="og:site_name" content="{{ SITENAME }}">
-  <meta property="og:image" content="{{ SITEURL }}{{ AVATAR }}">
+  <meta property="og:title" content="{{ post.title }}">
+  <meta property="og:url" content="{{ site.url }}/{{ post.url }}">
+  <meta property="og:description" content="{{ post.description|e }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.avatar }}">
+{% endif %}
 
+{% if site.show_social.twitter %}
   <!-- Twitter Cards
   ================================================== -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@{{ TWITTER_NAME }}">
-  <meta name="twitter:creator" content="@{{ TWITTER_NAME }}">
-  <meta name="twitter:domain" content="{{ DOMAIN }}">
-  <meta name="twitter:image" content="{{ SITEURL }}{{ LOGO_IMAGE }}">
-  <meta name="twitter:title" content="{{ article.title }}">
-  <meta name="twitter:description" content="{{ article.description|e }}">
-{% endblock %}
+  <meta name="twitter:site" content="@{{ site.footer_links.twitter_id }}">
+  <meta name="twitter:creator" content="@{{ site.footer_links.twitter_id }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.logo }}">
+  <meta name="twitter:title" content="{{ post.title }}">
+  <meta name="twitter:description" content="{{ post.description|e }}">
+{% endif %}
 
-{% block content %}
+<div>
 
   <!-- Article Headers
   ================================================================== -->
-  <h1 class="article-title"><a href="/{{ article.url }}" title="Permalink to {{ article.title }}">{{article.title}}</a></h1>
-  <h5 class="article-date">{{ article.date|strftime('%B %d, %Y') }}
-    {% if article.tags %} | Tags: {% for tag in article.tags %}
-        <a class="tag" href="/{{ tag.url }}" rel="tag" title="Posts tagged with {{ article.tag }}">{{ tag }}</a>
+  <h1 class="article-title"><a href="/{{ post.url }}" title="Permalink to {{ post.title }}">{{post.title}}</a></h1>
+  <h5 class="article-date">{{ post.date| date: "%B %d, %Y" }}
+    {% if post.tags %} | Tags: {% for tag in post.tags %}
+        <a class="tag" href="/{{ tag.url }}" rel="tag" title="Posts tagged with {{ post.tag }}">{{ tag }}</a>
       {% endfor %}
     {% endif %}
   </h5>
@@ -48,28 +45,28 @@
   <!-- Article Content
   ================================================================== -->
   <div class="article-content">
-    {{ article.content }}
+    {{ post.content }}
   </div>
 
   <hr class="small"></hr>
   <div class="article-sharing">
       <ul>
-      {% if TWITTER_NAME %}
+      {% if site.show_social.twitter %}
       <!-- Twitter Sharing
       ================================================================== -->
-      <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ TWITTER_NAME }}">Tweet</a></li>
+      <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.footer_links.twitter_id }}">Tweet</a></li>
       {% endif %}
 
-      {% if FACEBOOK_SHARE %}
+      {% if site.show_social.facebook %}
       <!-- Facebook Sharing
       ================================================================== -->
       <li><div class="fb-share-button"
-          data-href="{{ SITEURL }}/{{ article.url }}"
+          data-href="{{ site.url }}/{{ post.url }}"
           data-layout="button_count">
       </div></li>
       {% endif %}
 
-      {% if HACKER_NEWS_SHARE %}
+      {% if site.show_social.hacker_news %}
       <!-- Hacker NewsSharing
       ================================================================== -->
       <li><a href="https://news.ycombinator.com/submit" class="hn-button" data-count="horizontal">Vote on Hacker News</a></li>
@@ -84,4 +81,4 @@
     </div>
     <hr class="small"></hr>
   </div>
-{% endblock %}
+</div>

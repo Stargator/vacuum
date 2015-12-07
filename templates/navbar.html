@@ -4,23 +4,23 @@
   <div class="navbar-brand six columns">
       <ul>
         <li>
-          <a href="/" title="Home"><img id="logo" src="{{ LOGO_IMAGE }}" alt="{{ SITENAME }}"></a>
+          <a href="/" title="Home"><img id="logo" src="{{ site.avatar_path }}" alt="{{ site.name}}"></a>
         </li>
         <li>
-          <h1><a href="/" title="Home">{{ SITENAME }}</a></h1>
+          <h1><a href="/" title="Home">{{ site.title }}</a></h1>
         </li>
       </ul>
       <ul id="social-icons">
-        {% for nav in NAVIGATION %}
+        {% for nav in navigation %}
         <li>
-          <a class="icon" href="{{ nav['url'] }}" title="{{ nav['site'].title() }}">
-            <i class="fa fa-{{ nav['site'] }}"></i>
+          <a class="icon" href="{{ nav.url }}" title="{{ nav.site.title }}">
+            <i class="fa fa-fw fa-{{ nav.site }}"></i>
           </a>
         </li>
         {% endfor %}
         <li>
           <a class="icon" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="Subscribe (Atom)">
-            <i class="fa fa-rss"></i>
+            <i class="fa fa-fw fa-rss"></i>
           </a>
         </li>
         <li>

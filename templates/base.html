@@ -5,18 +5,18 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
-  {% block header %}{% endblock %}
+  <header></header>
 
 	<!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>{% block title %}{% endblock %}</title>
+  <title></title>
 
-  <meta name="description" content="{% block metadesc %}{% endblock %}">
-  <meta name="author" content="{{ AUTHOR }}">
-  <meta name="copyright" content="&copy; Copyright {{ SITENAME }}, {{ COPYRIGHT_START_YEAR }} to Present">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.creator }}">
+  <meta name="copyright" content="&copy; Copyright {{ site.creator }}, {{ site.copyright-start-year }} to Present">
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -29,29 +29,38 @@
 
   <!-- CSS
   ================================================== -->
-  {% assets filters="cssmin", output="css/style.min.css", "css/base.css", "css/skeleton.css", "css/layout.css", "css/void.css", "css/default.css" %}
-  <link rel="stylesheet" href="/{{ ASSET_URL }}">
-  {% endassets %}
+  <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/skeleton.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/void.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
-  {% if FEED_ALL_ATOM %}
+  {% if site.feed.path %}
   <!-- Feeds
   ================================================== -->
-  <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed">
+  <link rel="alternate" type="application/atom+xml" href="{{ site.feed.path }}" title="{{ site.title }} Full Atom Feed">
   {% endif %}
 
-  {% if TWITTER_CARDS %}
-  {% block twittercards %}{% endblock %}
+  {% if site.show_social.twitter %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.footer_links.twitter_id }}">
+    <meta name="twitter:creator" content="@{{ site.footer_links.twitter_id }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ site.avatar_path }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description|e }}">
   {% endif %}
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-  {% if article %}
-    {% if article.styles %}
+  {% if post %}
+    {% if post.styles %}
   <!-- Pelican Dynamic - for embedding D3 charts
   =================================================== -->
-        {% for style in article.styles %}
+        {% for style in post.styles %}
   {{ style }}
           {% endfor %}
       {% endif %}
@@ -59,7 +68,7 @@
 
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="{{ FAVICON_IMAGE }}">
+	<link rel="shortcut icon" href="{{ site.favicon }}">
 	<link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
@@ -69,14 +78,14 @@
 	<!-- Primary Page Layout
 	================================================== -->
 	<div class="container">
-    {% include 'navbar.html' %}
+    {% include navbar.html %}
 		<section id="content" class="twelve columns">
-			{% block content %}{% endblock %}
+			{{ content }}
 		</section>
-		{% include 'footer.html' %}
+		{% include footer.html %}
 	</div><!-- container -->
 
-	{% include "analytics.html" %}
+	{% include analytics.html %}
 
   <script type="text/javascript">
     $("a").on('click', function(e) {
@@ -101,13 +110,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-{% if TWITTER_NAME or TWITTER_CARDS %}
+{% if site.show_social.twitter %}
 <!-- twitter.js
 ==================================================================== -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 {% endif %}
 
-{% if FACEBOOK_SHARE %}
+{% if site.show_social.facebook %}
 <!-- Facebook SDK for JS
 ==================================================================== -->
 <div id="fb-root"></div>
@@ -120,17 +129,17 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 {% endif %}
 
-{% if HACKER_NEWS_SHARE %}
+{% if site.show_social.hacker_news %}
 <!-- Hacker News Share
 ==================================================================== -->
 <script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
 {% endif %}
 
-{% if article %}
-    {% if article.scripts %}
+{% if post %}
+    {% if post.scripts %}
 <!-- Pelican Dynamic - for embedding D3 charts
 =================================================== -->
-        {% for script in article.scripts %}
+        {% for script in post.scripts %}
 {{ script }}
         {% endfor %}
     {% endif %}

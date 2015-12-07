@@ -1,14 +1,17 @@
-{% extends 'base.html' %}
-{% block title %}{{ page.title }} | {{ SITENAME }}{% endblock %}
-{% block metadesc %}{{ DESCRIPTION }}{% endblock %}
-{% block content %}
+---
+layout: base
+---
+<title> {{ page.title }} | {{ site.title }}</title>
+<meta name="description" content="{{ page.description }}"/>
 
-  {% for article in articles %}
+<body>
+
+  {% for article in site.posts %}
     {% if article.status != 'draft' %}
-      <h2 class="article-title pull-left"><a href="/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h2>
-      <h5 class="article-date pull-right">{{ article.date|strftime('%b %d, %Y') }}</h5>
+      <h2 class="article-title pull-left"><a href="{{ site.url }}{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h2>
+      <h5 class="article-date pull-right">{{ article.date | date: "%b %d, %Y" }}</h5>
       <hr class="large">
     {% endif %}
   {% endfor %}
 
-{% endblock %}
+</body>

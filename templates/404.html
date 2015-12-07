@@ -1,13 +1,15 @@
-{% extends 'base.html' %}
-{% block title %}{{ page.title }}{% endblock %}
+---
+layout: base
+---
+<title> {{ page.title }} | {{ site.title }}</title>
 
-{% block content %}
+<div>
   <h1 class="article-title" >{{ page.title }}</h1>
   <div class="article-content"><p>{{ page.content }}</p></div>
   <hr class="large"></hr>
-  {% for article in articles[:5] %}
+  {% for article in site.posts[0..4] %}
     <h2 class="article-title pull-left"><a href="/{{ article.url }}" title="Permalink to {{ article.title }}">{{article.title}}</a></h2>
-    <h5 class="article-date pull-right">{{ article.date|strftime('%B %d, %Y') }}</h5>
+    <h5 class="article-date pull-right">{{ article.date| date: "%b %d, %Y" }}</h5>
     <hr class="large"></hr>
   {% endfor %}
-{% endblock %}
+</div>

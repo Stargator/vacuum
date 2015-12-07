@@ -1,16 +1,16 @@
 /*
-* Skeleton V1.2
-* Copyright 2011, Dave Gamache
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
 * www.getskeleton.com
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 6/20/2012
+* 12/29/2014
 */
 
 
-/* Table of Contents
-==================================================
-    #Base 960 Grid
+/* Table of contents
+��������������������������������������������������
+- Grid
     #Tablet (Portrait)
     #Mobile (Portrait)
     #Mobile (Landscape)
@@ -18,20 +18,24 @@
 
 
 
-/* #Base 960 Grid
-================================================== */
-    .row                                        { margin-bottom: 20px; }
+/* Grid
+�������������������������������������������������� */
+
+.container {
+  width: 75%;
+}
+/*whatever you want - can even be fixed if you prefer*/
+
+.column,
+.columns {
+  margin-left: 0.78125%;
+  margin-right: 0.78125%; }
 
     /* Nested Column Classes */
     .column.alpha, .columns.alpha               { margin-left: 0; }
     .column.omega, .columns.omega               { margin-right: 0; }
 
-/* #Flexible column widths
-================================================== */
-    .container                                  { width: 75%; } /*whatever you want - can even be fixed if you prefer*/
-    .container .column,
-    .container .columns                         { margin-left: 0.78125%; margin-right: 0.78125%;  }
-
+    /* Base Grid */
     .container .one.column,
     .container .one.columns                     { width: 4.6875%; }
     .container .two.columns                     { width: 10.9375%; }

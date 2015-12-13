@@ -2,18 +2,18 @@
 layout: base
 ---
 <title> {{ page.title }} | {{ site.title }}</title>
-<!--{% block metadesc %}{{ page.description|e }}{% endblock %} -->
+<meta name="description" content="{{ page.description|e }}"/>
 
 <header>
 <style>
-    img.round {
+  img.round {
     border: 2px solid #222;
     height: 200px;
     width: 200px;
     line-height: 200px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    }
+  }
 </style>
 </header>
 

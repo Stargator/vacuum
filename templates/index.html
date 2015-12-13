@@ -2,7 +2,8 @@
 layout: base
 ---
 <title> {{ page.title }} | {{ site.title }}</title>
-<!--{% block metadesc %}{{ DESCRIPTION }}{% endblock %}-->
+<meta name="description" content="{{ page.description|e }}"/>
+
 <div>
 
   {% for post in site.posts %}

@@ -2,7 +2,7 @@
 layout: base
 ---
 <title> {{ page.title }} | {{ site.title }}</title>
-<!--{% block metadesc %}{{ article.description|e }}{% endblock %}-->
+<meta name="description" content="{{ page.description|e }}"/>
 <!--{% block affiliate %}{{ article.affiliate_link|safe }}{% endblock %}-->
 
 <header>
@@ -53,7 +53,7 @@ layout: base
       {% endfor %}
     {% endif %}
   </h5>
-  <hr class="small"></hr>
+  <hr class="small"/>
 
   <!-- Article Content
   ================================================================== -->
@@ -61,7 +61,7 @@ layout: base
     {{ post.content }}
   </div>
 
-  <hr class="small"></hr>
+  <hr class="small"/>
   <div class="article-sharing">
       <ul>
       {% if TWITTER_NAME %}
@@ -90,7 +90,7 @@ layout: base
     <div class="back-to-home">
       <a href="/">← Back to Home</a>
     </div>
-    <hr class="small"></hr>
+    <hr class="small"/>
   </div>
   <script>
     // hide ipython notebook cell numbers

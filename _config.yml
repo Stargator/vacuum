@@ -29,9 +29,9 @@ highlighter: coderay #or rouge
 theme: vacuum-jekyll-theme
 
 ## Where things are
-source: ./static
-destination: ./_site
-layouts_dir: templates
+source: .
+destination: ./_site/
+layouts_dir: ./_layouts/
 
 ## Handling Reading
 safe: false

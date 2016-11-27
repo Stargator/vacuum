@@ -4,7 +4,9 @@ layout: base
 <title> {{ post.title }} | {{ site.title }}</title>
 <meta name="description" content="{{ post.description|e }}"/>
 
-<header>
+<header class="article-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">Written on {{ page.date | date: "%b %-d, %Y %H:%M:%S" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 </header>
 
 {% if site.show_social.facebook %}
@@ -46,6 +48,7 @@ layout: base
   ================================================================== -->
   <div class="article-content">
     {{ post.content }}
+      {% include disqus.html %}
   </div>
 
   <hr class="small"/>

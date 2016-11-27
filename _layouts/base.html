@@ -29,7 +29,7 @@
 
   <!-- CSS
   ================================================== -->
-  <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/skeleton.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
@@ -66,24 +66,21 @@
       {% endif %}
   {% endif %}
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="{{ site.favicon }}">
-	<link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{{ site.favicon }}">
 
 </head>
 <body>
-	<!-- Primary Page Layout
-	================================================== -->
-	<div class="container">
+<!-- Primary Page Layout
+================================================== -->
+<div class="container">
     {% include navbar.html %}
-		<section id="content" class="twelve columns">
-			{{ content }}
-		</section>
-		{% include footer.html %}
-	</div><!-- container -->
+    <section id="content" class="twelve columns">
+        {{ content }}
+    </section>
+    {% include footer.html %}
+</div><!-- container -->
 
 	{% include analytics.html %}
 

@@ -1,5 +1,4 @@
-vacuum
-====
+# vacuum
 
 vacuum is a theme for Jekyll. It's pretty much empty of all color. 
 vacuum uses [Skeleton](http://www.getskeleton.com)
@@ -18,6 +17,9 @@ Screenshots
 
 ### Article
 ![Article Page](/examples/article.png)
+
+## Usage
+```gem install vacuum-jekyll-theme```
 
 Example _config.yml
 ----------------------
@@ -108,3 +110,6 @@ feed:
   main: /feed/feed.xml
   tag:  /feed/tag/%s.atom.xml
 ```
+
+## Contributing
+```bundle install --path vendor\bundle```

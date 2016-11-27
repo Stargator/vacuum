@@ -243,6 +243,8 @@ blockquote {
 	border-radius: 4px;
 }
 
+div.output_stream pre {	font-size: 12px !important; }
+
 
 /* Mobile
 **************************************/

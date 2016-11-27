@@ -1,0 +1,52 @@
+<!-- Navigation
+================================================== -->
+<nav class="navbar">
+  <div class="navbar-brand six columns">
+      <ul>
+        <li>
+          <a href="/" title="Home"><img id="logo" src="/images/maltese_icon.jpg" alt=""></a>
+        </li>
+        <li>
+          <h1><a href="/" title="Home">{{ site.title }}</a></h1>
+        </li>
+      </ul>
+      <ul id="social-icons">
+        {% if site.footer-links.twitter_username %}
+        {% endif %}
+        {% if site.footer-links.github_username %}
+        <li>
+          <a class="icon" href="https://github.com/{{ site.footer-links.github_username }}" title="GitHub">
+            <em class="fa fa-fw fa-github"></em>
+          </a>
+        </li>
+        {% endif %}
+        {% if site.footer-links.linkedin_url %}
+        <li>
+          <a class="icon" href="{{ site.footer-links.linkedin_url }}" title="LinkedIn">
+            <em class="fa fa-fw fa-linkedin"></em>
+          </a>
+        </li>
+        {% endif %}
+        {% if site.footer-links.email %}
+        <li>
+          <a class="icon" href="mailto:{{ site.footer-links.email }}?subject=Hi" title="E-Mail">
+            <em class="fa fa-fw fa-envelope"></em>
+          </a>
+        </li>
+        {% endif %}
+        {% if site.feed.path %}
+        <li>
+          <a class="icon" href="{{ site.url }}/{{ site.feed.path }}" title="Subscribe (Atom)">
+            <em class="fa fa-fw fa-rss"></em>
+          </a>
+        </li>
+        {% endif %}
+      </ul> <!-- End social-icons ul -->
+    </div> <!-- End navbar-brand -->
+
+  <div class="navbar-links">
+      <ul>
+        <li><a href="/blog/">Blog</a></li>
+      </ul> <!-- End navbar-links ul -->
+    </div> <!-- End navbar-links -->
+</nav> <!-- End navbar -->

@@ -6,28 +6,30 @@ layout: base
 
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title"><a href="/{{ page.title }}" title="Permalink to {{ page.title }}">{{ page.title }}</a></h1>
-  </header>
+    <header class="post-header">
+        <h1 class="post-title"><a href="/{{ page.title }}" title="Permalink to {{ page.title }}">{{ page.title }}</a>
+        </h1>
+    </header>
 
-  {% if site.show_social.twitter %}
-  <!-- Twitter Cards
-  ================================================== -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@{{ site.footer_links.twitter_id }}">
-  <meta name="twitter:creator" content="@{{ site.footer_links.twitter_id }}">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}">
-  <meta name="twitter:title" content="{{ post.title }}">
-  <meta name="twitter:description" content="{{ post.description|e }}">
-  {% endif %}
+    {% if site.show_social.twitter %}
+    <!-- Twitter Cards
+    ================================================== -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.footer_links.twitter_id }}">
+    <meta name="twitter:creator" content="@{{ site.footer_links.twitter_id }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}">
+    <meta name="twitter:title" content="{{ post.title }}">
+    <meta name="twitter:description" content="{{ post.description|e }}">
+    {% endif %}
 
-<div>
+    <div>
+        <h1 class="article-title"><a href="/{{ page.url }}" title="Permalink to {{ page.title }}">{{page.title}}</a>
+        </h1>
 
-  <h1 class="article-title"><a href="/{{ page.url }}" title="Permalink to {{ page.title }}">{{page.title}}</a></h1>
+        <div class="article-content">
+            {{ content }}
+        </div>
+        <hr class="large">
 
-  <div class="article-content">
-    {{ content }}
-  </div>
-  <hr class="large">
-
+    </div>
 </div>

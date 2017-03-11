@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "vacuum-jekyll-theme"
-  spec.version = "0.1.6"
+  spec.version = "0.1.7"
   spec.authors = ["Stargator"]
   spec.email = ["wildbug@linuxmail.org"]
 
@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata["plugin_type"] = "theme"
 
-  spec.add_runtime_dependency "jekyll", "~> 3.3"
+  spec.add_runtime_dependency "jekyll", "<= 2.4"
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"

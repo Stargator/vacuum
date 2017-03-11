@@ -6,7 +6,11 @@ layout: base
 
 <header class="article-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">Written on {{ page.date | date: "%b %-d, %Y %H:%M:%S" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">
+        Written on
+        {{ page.date | date: "%b %-d, %Y %H:%M:%S" }}{% if page.author %} •
+        {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+    </p>
 </header>
 
 {% if site.show_social.facebook %}
@@ -57,7 +61,11 @@ layout: base
       {% if site.show_social.twitter %}
       <!-- Twitter Sharing
       ================================================================== -->
-      <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.footer_links.twitter_id }}">Tweet</a></li>
+      <li>
+          <a href="https://twitter.com/share"
+             class="twitter-share-button"
+             data-via="{{ site.footer_links.twitter_id }}">Tweet</a>
+      </li>
       {% endif %}
 
       {% if site.show_social.facebook %}
@@ -72,7 +80,11 @@ layout: base
       {% if site.show_social.hacker_news %}
       <!-- Hacker NewsSharing
       ================================================================== -->
-      <li><a href="https://news.ycombinator.com/submit" class="hn-button" data-count="horizontal">Vote on Hacker News</a></li>
+      <li>
+          <a href="https://news.ycombinator.com/submit"
+             class="hn-button"
+             data-count="horizontal">Vote on Hacker News</a>
+      </li>
       {% endif %}
       </ul>
     </div>

@@ -8,7 +8,9 @@ layout: base
   <div class="article-content"><p>{{ page.content }}</p></div>
   <hr class="large"></hr>
   {% for article in site.posts[0..4] %}
-    <h2 class="article-title pull-left"><a href="/{{ article.url }}" title="Permalink to {{ article.title }}">{{article.title}}</a></h2>
+    <h2 class="article-title pull-left">
+      <a href="/{{ article.url }}" title="Permalink to {{ article.title }}">{{article.title}}</a>
+    </h2>
     <h5 class="article-date pull-right">{{ article.date| date: "%b %d, %Y" }}</h5>
     <hr class="large"></hr>
   {% endfor %}

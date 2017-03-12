@@ -32,10 +32,9 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/skeleton.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/void.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/styles.css" | prepend: site.baseurl }}">
 
   {% if site.feed.path %}
   <!-- Feeds
@@ -47,7 +46,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.footer_links.twitter_id }}">
     <meta name="twitter:creator" content="@{{ site.footer_links.twitter_id }}">
-    <meta name="twitter:image" content="{{ site.url }}{{ site.avatar_path }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ site.logo }}">
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.description|e }}">
   {% endif %}
@@ -84,28 +83,28 @@
 
 	{% include analytics.html %}
 
-  <script type="text/javascript">
-    $("a").on('click', function(e) {
-      var url = $(this).attr("href");
-      console.log(url);
-      if (e.currentTarget.host != window.location.host) {
-        _gaq.push(['_trackEvent', 'Outbound Links', e.currentTarget.host, url, 0]);
-        if (e.metaKey || e.ctrlKey) {
-          var newtab = true;
-        }
-        if (!newtab) {
-          e.preventDefault();
-          setTimeout('document.location = "' + url + '"', 100);
-        }
-      }
-    });
-  </script>
-</body> <!-- End body -->
-
 <!-- JavaScript
 =================================================== -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript">
+  $("a").on('click', function (e) {
+    var url = $(this).attr("href");
+    console.log(url);
+    if ( e.currentTarget.host != window.location.host ) {
+      _gaq.push([ '_trackEvent', 'Outbound Links', e.currentTarget.host, url, 0 ]);
+      if ( e.metaKey || e.ctrlKey ) {
+        var newtab = true;
+      }
+      if ( !newtab ) {
+        e.preventDefault();
+        setTimeout('document.location = "' + url + '"', 100);
+      }
+    }
+  });
+</script>
+
+</body> <!-- End body -->
 
 {% if site.show_social.twitter %}
 <!-- twitter.js

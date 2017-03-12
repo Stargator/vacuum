@@ -1,4 +1,9 @@
+!.keep
+.asset-cache/
+_assets/bower/
 .bundle/
 _site/
 vendor/
+*.DS_Store
 *.gem
+*.sass-cache

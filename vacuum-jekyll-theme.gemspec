@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
 
   # Version 0.1.6
   spec.files = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r{^(assets|_layouts|_includes|_sass)/|(LICENSE|README)((\.(txt|md|markdown)|$))}i)
+    f.match(%r{^(_assets|_includes|_layouts|_sass|blog)/|(LICENSE|README)((\.(txt|md|markdown)|$))}i)
   end
 
   # spec.files = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
@@ -27,8 +27,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata["plugin_type"] = "theme"
 
-  spec.add_runtime_dependency "jekyll", "<= 2.4"
+  spec.add_runtime_dependency "jekyll", "<= 3.3.1"
 
-  spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
 end

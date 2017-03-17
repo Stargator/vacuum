@@ -1,4 +1,4 @@
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
@@ -12,7 +12,17 @@
     {% endif %}
     <meta name="author" content="{{ site.creator }}" />
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:image" content="{{ site.url }}{% asset_path og-image.jpg %}">
+
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="{{ page.url | absolute_url }}">
     <meta property="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ site.url }}{% asset_path og-image.jpg %}">
     {% endif %}

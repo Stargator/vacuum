@@ -20,8 +20,8 @@ copyright-start-year: 2015
 
 # Icon settings
 logo: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
-logo_description: 'This is my avatar'
-favicon: images/site-icons/favicon.ico
+logo-description: "This is the site's logo"
+favicon: /assets/favicon.ico
 
 # Build Settings
 ## Conversion
@@ -41,8 +41,15 @@ assets:
     automatic_img_size: false
     liquid: true
 
+  assets:
+  - "*.css"
+  - "*.ico"
+  - "*.jpg"
+  - "*.png"
+
   sources:
     - _assets/bower
+    - _assets/css
     - _assets/fonts
     - _assets/images
     - _assets/javascripts
@@ -58,13 +65,21 @@ safe: false
 encoding: "utf-8"
 # Exclude these files from your production _site
 exclude:
-  - .bowerrc
-  - .travis.yml
   - bin/*
-  - bower.json
-  - circle.yml
+  - examples/*
+  - node_modules/*
+  - tests/*
+  - /*.gem
+  - /*.gemspec
+  - /*.iml
+  - /*.json
+  - /*.lock
+  - /*.properties
+  - /*.yml
+  - .bowerrc
   - Gemfile
-  - Gemfile.lock
+  - LICENSE
+  - Rakefile
   - README.md
   - vendor
 
@@ -85,6 +100,7 @@ sass:
 whitelist: []
 gems:
   - jekyll-assets
+  - jekyll-feed
   - jekyll-sitemap
 
 # Serve settings
@@ -184,6 +200,6 @@ footer-links:
 
 # Feed Settings
 feed:
-  main: /feed/feed.xml
+  main: /feed.xml
   # TODO Ensure tag feed works properly
   tag:  /feed/tag/%s.atom.xml

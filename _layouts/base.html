@@ -30,11 +30,11 @@
   <!-- CSS
   ================================================== -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/skeleton.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/void.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/default.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/css/styles.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/base.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/skeleton.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/void.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/default.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/styles.css" | prepend: site.baseurl }}">
 
   {% if site.feed.path %}
   <!-- Feeds
@@ -71,6 +71,12 @@
 
 </head>
 <body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong>
+    browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>
+    to improve your experience.</p>
+<![endif]-->
+
 <!-- Primary Page Layout
 ================================================== -->
 <div class="container">

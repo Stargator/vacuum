@@ -3,9 +3,10 @@
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    {% css main %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <!-- Favicon
     ================================================== -->
     <link rel="shortcut icon" href="{{ site.favicon }}">
+    <link rel="apple-touch-icon" href="{% asset_path apple-touch-icon.png %}">
 </head>

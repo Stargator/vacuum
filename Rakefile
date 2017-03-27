@@ -5,6 +5,7 @@ require "html-proofer"
 
 task :test do
   sh "rm -R _site/"
+  sh "bundle install --path vendor/bundle"
   sh "bundle exec jekyll build"
   options = {
       :only_4xx => true,

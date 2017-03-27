@@ -93,48 +93,27 @@
 =================================================== -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript">
-  $("a").on('click', function (e) {
-    var url = $(this).attr("href");
-    console.log(url);
-    if ( e.currentTarget.host != window.location.host ) {
-      _gaq.push([ '_trackEvent', 'Outbound Links', e.currentTarget.host, url, 0 ]);
-      if ( e.metaKey || e.ctrlKey ) {
-        var newtab = true;
-      }
-      if ( !newtab ) {
-        e.preventDefault();
-        setTimeout('document.location = "' + url + '"', 100);
-      }
-    }
-  });
-</script>
+<script type="text/javascript" src="../javascript/load-google-analytics.js"></script>
 
 </body> <!-- End body -->
 
 {% if site.show_social.twitter %}
 <!-- twitter.js
 ==================================================================== -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script type="text/javascript" src="../javascript/load-twitter.js"></script>
 {% endif %}
 
 {% if site.show_social.facebook %}
 <!-- Facebook SDK for JS
 ==================================================================== -->
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" src="../javascript/load-facebook.js"></script>
 {% endif %}
 
 {% if site.show_social.hacker_news %}
 <!-- Hacker News Share
 ==================================================================== -->
-<script type="text/javascript">var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+<script type="text/javascript" src="../javascript/load-hacker-news.js"></script>
 {% endif %}
 
 {% if post %}

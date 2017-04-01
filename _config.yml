@@ -56,9 +56,9 @@ assets:
     - _assets/stylesheets
 
 ## Where things are
-source: .
-destination: ./_site/
-layouts_dir: ./_layouts/
+source: ./content/
+destination: ./output/
+layouts_dir: ./content/_layouts/
 
 ## Handling Reading
 safe: false

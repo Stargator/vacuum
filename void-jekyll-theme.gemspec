@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "void-jekyll-theme"
-  spec.version = "0.1.9"
+  spec.version = "0.2.6"
   spec.authors = ["Stargator"]
   spec.email = ["wildbug@linuxmail.org"]
 
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata["plugin_type"] = "theme"
 
-  spec.add_runtime_dependency "jekyll", "<= 3.3.1"
+  spec.add_runtime_dependency "jekyll", ">= 3.3.1"
 
   spec.add_runtime_dependency "autoprefixer-rails", "<= 6.7.7"
   spec.add_runtime_dependency "jekyll-assets", "<= 2.2.8"

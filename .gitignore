@@ -1,6 +1,5 @@
 !.keep
 .asset-cache/
-content/_assets/bower/
 .bundle/
 _site/
 vendor/

@@ -30,11 +30,11 @@
   <!-- CSS
   ================================================== -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/base.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/assets/skeleton.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/assets/void.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/assets/default.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/assets/styles.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/base.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/skeleton.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/void.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/default.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | prepend: site.baseurl }}">
 
   {% if site.feed.path %}
   <!-- Feeds
@@ -57,11 +57,9 @@
 
   {% if post %}
     {% if post.styles %}
-  <!-- Pelican Dynamic - for embedding D3 charts
-  =================================================== -->
         {% for style in post.styles %}
-  {{ style }}
-          {% endfor %}
+          {{ style }}
+        {% endfor %}
       {% endif %}
   {% endif %}
 
@@ -91,29 +89,29 @@
 
 <!-- JavaScript
 =================================================== -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.slim.min.js"></script>
 <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src="../javascript/load-google-analytics.js"></script>
+<script type="text/javascript" src="../assets/javascript/load-google-analytics.js"></script>
 
 </body> <!-- End body -->
 
 {% if site.show_social.twitter %}
 <!-- twitter.js
 ==================================================================== -->
-<script type="text/javascript" src="../javascript/load-twitter.js"></script>
+<script type="text/javascript" src="../assets/javascript/load-twitter.js"></script>
 {% endif %}
 
 {% if site.show_social.facebook %}
 <!-- Facebook SDK for JS
 ==================================================================== -->
 <div id="fb-root"></div>
-<script type="text/javascript" src="../javascript/load-facebook.js"></script>
+<script type="text/javascript" src="../assets/javascript/load-facebook.js"></script>
 {% endif %}
 
 {% if site.show_social.hacker_news %}
 <!-- Hacker News Share
 ==================================================================== -->
-<script type="text/javascript" src="../javascript/load-hacker-news.js"></script>
+<script type="text/javascript" src="../assets/javascript/load-hacker-news.js"></script>
 {% endif %}
 
 {% if post %}

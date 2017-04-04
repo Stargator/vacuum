@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:image" content="{{ site.url }}{% asset_path og-image.jpg %}">
+    <meta property="og:image" content="{{ site.url }}{% og-image.jpg | prepend: site.baseurl %}">
 
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}" />
@@ -24,5 +24,5 @@
     <meta property="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:title" content="{{ page.title }}">
     <meta name="twitter:description" content="{{ page.description }}">
-    <meta name="twitter:image" content="{{ site.url }}{% asset_path og-image.jpg %}">
+    <meta name="twitter:image" content="{{ site.url }}{% og-image.jpg | prepend: site.baseurl %}">
     {% endif %}

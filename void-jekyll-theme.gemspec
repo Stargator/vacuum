@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "void-jekyll-theme"
-  spec.version = "0.2.6"
+  spec.version = "0.3"
   spec.authors = ["Stargator"]
   spec.email = ["wildbug@linuxmail.org"]
 
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r{^(_assets|_includes|_layouts|_sass|blog)/|(LICENSE|README)((\.(txt|md|markdown)|$))}i)
+    f.match(%r{^(assets|_includes|_layouts|_sass|blog)/|(LICENSE|README)((\.(txt|md|markdown)|$))}i)
   end
 
   # spec.files = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
@@ -25,12 +25,11 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", ">= 3.3.1"
 
-  spec.add_runtime_dependency "autoprefixer-rails", "<= 6.7.7"
-  spec.add_runtime_dependency "jekyll-assets", "<= 2.2.8"
-  spec.add_runtime_dependency "jekyll-feed", "<= 0.9.1"
+  spec.add_runtime_dependency "autoprefixer-rails", "<= 6.7.7.1"
+  spec.add_runtime_dependency "jekyll-feed", "<= 0.9.2"
 
   spec.add_runtime_dependency "sass", "<= 3.4.23"
-  spec.add_runtime_dependency "uglifier", "<= 3.1.7"
+  spec.add_runtime_dependency "uglifier", "<= 3.1.12"
   spec.add_runtime_dependency "jekyll-sitemap", "<= 1.0.0"
 
   spec.add_development_dependency "html-proofer", "<= 3.5"

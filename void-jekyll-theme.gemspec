@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-feed", "<= 0.9.2"
 
   spec.add_runtime_dependency "sass", "= 3.5.5"
-  spec.add_runtime_dependency "uglifier", "<= 3.1.12"
+  spec.add_runtime_dependency "uglifier", "= 4.1.3"
   spec.add_runtime_dependency "jekyll-sitemap", "<= 1.0.0"
 
   spec.add_development_dependency "html-proofer", "<= 3.5"

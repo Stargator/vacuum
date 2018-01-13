@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll", "= 3.4.3"
 
   spec.add_runtime_dependency "autoprefixer-rails", "= 7.2.5"
-  spec.add_runtime_dependency "jekyll-feed", "<= 0.9.2"
+  spec.add_runtime_dependency "jekyll-feed", "= 0.9.2"
 
   spec.add_runtime_dependency "sass", "= 3.5.5"
   spec.add_runtime_dependency "uglifier", "= 4.1.3"

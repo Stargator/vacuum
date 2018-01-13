@@ -33,5 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-sitemap", "= 1.1.1"
 
   spec.add_development_dependency "html-proofer", "= 3.8.0"
-  spec.add_development_dependency "rake", "~> 10.5"
+  spec.add_development_dependency "rake", "= 12.3.0"
 end

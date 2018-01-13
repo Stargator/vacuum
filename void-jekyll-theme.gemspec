@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata["plugin_type"] = "theme"
 
-  spec.add_runtime_dependency "jekyll", "= 3.4.3"
+  spec.add_runtime_dependency "jekyll", "= 3.7.0"
 
   spec.add_runtime_dependency "autoprefixer-rails", "= 7.2.5"
   spec.add_runtime_dependency "jekyll-feed", "= 0.9.2"

@@ -1,6 +1,7 @@
 !.keep
 .asset-cache/
 .bundle/
+.idea/
 _site/
 vendor/
 *.DS_Store

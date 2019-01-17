@@ -1,13 +1,13 @@
 source "https://rubygems.org"
 gem 'jekyll', '<= 3.8.5'
 
-gem 'autoprefixer-rails', '~>  7.2.5'
-gem 'jekyll-feed', '~> 0.9.2'
+gem 'autoprefixer-rails', '~>  9.4'
+gem 'jekyll-feed', '~> 0.11'
 
-gem 'uglifier', '~> 4.1.3'
-gem 'jekyll-sitemap', '~> 1.1.1'
+gem 'uglifier', '~> 4.1'
+gem 'jekyll-sitemap', '~> 1.2'
 
-gem 'html-proofer', '~> 3.8.0', :group => :development
-gem 'rake', '~> 12.3.0', :group => :development
+gem 'html-proofer', '~> 3.10', :group => :development
+gem 'rake', '~> 12.3', :group => :development
 
 gemspec

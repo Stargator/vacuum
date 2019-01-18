@@ -76,6 +76,7 @@ exclude:
   - /*.json
   - /*.lock
   - /*.properties
+  - /*.txt
   - /*.yml
   - .bowerrc
   - Gemfile

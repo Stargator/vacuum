@@ -1,9 +1,9 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/Stargator/void-jekyll-theme.svg)](https://gemnasium.com/github.com/Stargator/void-jekyll-theme)
 
-# vacuum
+# void-jekyll-theme
 
-vacuum is a theme for Jekyll. It's pretty much empty of all color. 
-vacuum uses [Skeleton](http://www.getskeleton.com)
+void-jekyll-theme is a theme, for Jekyll. It's pretty much empty of all color. 
+void-jekyll-theme uses [Skeleton](http://www.getskeleton.com)
 and [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
 
 It's based on [void](http://github.com/gjreda/void) for Pelican.
@@ -21,7 +21,7 @@ Screenshots
 ![Article Page](/examples/article.png)
 
 ## Usage
-```gem install vacuum-jekyll-theme```
+```gem install void-jekyll-theme```
 
 Example _config.yml
 ----------------------
@@ -45,7 +45,7 @@ avatar_description: # This is my avatar"
 ## Conversion
 markdown: kramdown
 highlighter: coderay
-theme: vacuum-jekyll-theme
+theme: void-jekyll-theme
 
 ## Handling Reading
 safe: false

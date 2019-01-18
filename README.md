@@ -100,9 +100,15 @@ show_social:
   facebook: false
   twitter: false
 
+# Commenting tools
+
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
 #disqus:
+
+# Enter your Talkyard url to enable commenting on posts
+# You can find your url on the Settings page of your Talkyard account
+#talkyard_server_url: https://comments-demo.talkyard.io
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 #google_analytics:

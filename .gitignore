@@ -4,6 +4,6 @@
 .idea/
 _site/
 vendor/
-*.DS_Store
+*DS_Store
 *.gem
 *.sass-cache

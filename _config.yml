@@ -56,34 +56,20 @@ assets:
     - assets/stylesheets
 
 ## Where things are
-source: .
+source: ./_content/
 destination: ./_site/
-layouts_dir: ./_layouts/
+layouts_dir: ./_content/_layouts/
 
 ## Handling Reading
 safe: false
 encoding: "utf-8"
 # Exclude these files from your production _site
 exclude:
-  - .*/
-  - bin/*
   - examples/*
   - node_modules/*
   - tests/*
-  - /*.gem
-  - /*.gemspec
-  - /*.iml
-  - /*.json
-  - /*.lock
-  - /*.properties
-  - /*.txt
-  - /*.yml
   - .bowerrc
-  - Gemfile
-  - LICENSE
-  - Rakefile
-  - README.md
-  - vendor
+  - vendor/
 
 #include:
 #keep_files:

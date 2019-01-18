@@ -114,4 +114,6 @@ feed:
 ```
 
 ## Contributing
-```bundle install --path vendor\bundle```
+If you are interested in contributing, it is recommended that you install the dependencies locally using: ```bundle install --path vendor/bundle```
+
+Improvements can include security fixes for any JavaScript issues, formatting, typos, etc. 

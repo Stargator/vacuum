@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email = ["wildbug@linuxmail.org"]
 
   spec.summary = "A simple Jekyll theme that is absent much color"
-  spec.homepage = "https://github.com/Stargator/vacuum"
+  spec.homepage = "https://github.com/Stargator/void-jekyll-theme"
   spec.license = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|

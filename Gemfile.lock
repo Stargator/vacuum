@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    void-jekyll-theme (0.5)
+    void-jekyll-theme (0.5.1)
 
 GEM
   remote: https://rubygems.org/

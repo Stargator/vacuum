@@ -114,6 +114,10 @@ feed:
 ```
 
 ## Contributing
-If you are interested in contributing, it is recommended that you install the dependencies locally using: ```bundle install --path vendor/bundle```
+If you are interested in contributing, you will need Ruby 2.6 installed as well as bundler.
 
-Improvements can include security fixes for any JavaScript issues, formatting, typos, etc. 
+It is recommended that you install the dependencies into a local path: `vendor/bundle`
+
+To do so run this command: ```bundle config set path 'vendor/bundle'```. Before running `bundle install`.
+
+Improvements can include security fixes for any JavaScript issues, new features, formatting, typos, as wells as updates to documentation.

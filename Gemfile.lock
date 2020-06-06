@@ -92,7 +92,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails (~> 9.4)
   html-proofer (~> 3.10)
-  jekyll (<= 3.8.7)
+  jekyll (< 4.0.0)
   jekyll-feed (~> 0.11)
   jekyll-sitemap (~> 1.2)
   rake (~> 12.3)

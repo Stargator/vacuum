@@ -71,10 +71,13 @@ layout: base
       {% if site.show_social.facebook %}
       <!-- Facebook Sharing
       ================================================================== -->
-      <li><div class="fb-share-button"
+      <div class="fb-share-button"
           data-href="{{ site.url }}/{{ post.url }}"
-          data-layout="button_count">
-      </div></li>
+          data-layout="button"data-size="small">
+          <a target="_blank"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+             class="fb-xfbml-parse-ignore">Share</a>
+      </div>
       {% endif %}
 
       {% if site.show_social.hacker_news %}
@@ -91,9 +94,6 @@ layout: base
 
     <!-- Back to home
     ================================================================== -->
-    <div class="back-to-home">
-      <a href="/">← Back to Home</a>
-    </div>
     <hr class="small"/>
   </div>
 </div>

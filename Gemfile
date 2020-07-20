@@ -1,8 +1,8 @@
 source "https://rubygems.org"
-gem 'jekyll', '<= 3.8.5'
+gem 'jekyll', '~> 4.0'
 
-gem 'jekyll-sitemap', '~> 1.2', group: :jekyll_plugins
-gem 'jekyll-feed', '~> 0.11', group: :jekyll_plugins
+gem 'jekyll-sitemap', '~> 1.4', '>= 1.4.0', group: :jekyll_plugins
+gem 'jekyll-feed', '~> 0.13', '>= 0.13.0', group: :jekyll_plugins
 
 gem 'autoprefixer-rails', '~>  9.4'
 gem 'uglifier', '~> 4.1'

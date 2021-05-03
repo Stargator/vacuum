@@ -2,6 +2,7 @@
 .asset-cache/
 .bundle/
 .idea/
+.jekyll-cache/
 _site/
 vendor/
 *DS_Store

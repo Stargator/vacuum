@@ -143,7 +143,7 @@ kramdown:
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   input: GFM
-  syntax_highlighter: coderay
+  syntax_highlighter: kramdown-syntax-coderay
   syntax_highlighter_opts:
       wrap:              div
       line_numbers:      inline

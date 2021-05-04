@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "void-jekyll-theme"
-  spec.version = "0.5.1"
+  spec.version = "0.6.0"
   spec.authors = ["Stargator"]
   spec.email = ["wildbug@linuxmail.org"]
 

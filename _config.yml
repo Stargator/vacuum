@@ -100,7 +100,7 @@ sass:
 
 # Build Plugins
 whitelist: []
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 

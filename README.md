@@ -27,7 +27,7 @@ Example _config.yml
 ----------------------
 ```yaml
 # Name of your site (displayed in the header)
-name: 'Example Vacuum Theme'
+name: 'Example Void Theme'
 title: "Example: What is the title of your site?"
 
 # Short bio or description (displayed in the header)

@@ -4,6 +4,13 @@ layout: base
 <title> {{ post.title }} | {{ site.title }}</title>
 <meta name="description" content="{{ post.description|e }}"/>
 
+<!-- Back to blog index
+================================================================== -->
+<div class="back-to">
+    <a href="/blog">← Back to Blog</a>
+</div>
+<hr class="small"/>
+
 <header class="article-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
@@ -89,10 +96,10 @@ layout: base
       </ul>
     </div>
 
-    <!-- Back to home
+    <!-- Back to blog index
     ================================================================== -->
-    <div class="back-to-home">
-      <a href="/">← Back to Home</a>
+    <div class="back-to">
+      <a href="/blog">← Back to Blog</a>
     </div>
     <hr class="small"/>
   </div>

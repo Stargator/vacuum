@@ -5,8 +5,10 @@ require "html-proofer"
 
 task :test do
   sh "rm -R _site/"
-  sh "bundle install --path vendor/bundle"
+  sh "bundle config set --local path 'vendor/bundle'"
+  sh "bundle install"
   sh "bundle exec jekyll build"
+  sh "gem list -i '^html-proofer$' || gem install html-proofer"
   options = {
       :only_4xx => true,
       :allow_hash_href => true,
@@ -21,7 +23,6 @@ task :test do
       # :log_level => :fatal,
       :verbose => true
   }
-  #only-4xx --allow-hash-href --assume-extension --check-opengraph --trace --check-favicon --empty-alt-ignore
 
   HTMLProofer.check_directory("./_site", options).run
 end

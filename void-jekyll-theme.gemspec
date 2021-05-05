@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r{^(assets|_includes|_layouts|_sass|blog)/|(LICENSE|README)((\.(txt|md|markdown)|$))}i)
+    f.match(%r{^(assets|_includes|_layouts|_sass|blog)/|(LICENSE|README|SECURITY)((\.(txt|md|markdown)|$))}i)
   end
 
   # spec.files = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }

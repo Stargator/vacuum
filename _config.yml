@@ -83,6 +83,7 @@ exclude:
   - LICENSE
   - Rakefile
   - README.md
+  - SECURITY.md
   - vendor
 
 #include:

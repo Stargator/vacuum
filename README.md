@@ -4,7 +4,7 @@
 
 void-jekyll-theme is a theme, for Jekyll. It's pretty much empty of all color. 
 void-jekyll-theme uses [Skeleton](http://www.getskeleton.com)
-and [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
+and [Font Awesome](http://fontawesome.com).
 
 It's based on [void](http://github.com/gjreda/void) for Pelican.
 

@@ -15,9 +15,10 @@ updates:
       interval: 'monthly'
       day: 'friday'
     ignore:
-      - dependency-type: development
       - dependency-name: 'autoprefixer-rails'
       - dependency-name: 'uglifier'
+      - dependency-name: 'html-proofer'
+      - dependency-name: 'rake'
     # Users to assign pull requests for version and security updates
     assignees:
       - 'Stargator'

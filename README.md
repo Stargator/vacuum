@@ -1,5 +1,3 @@
-[![Dependency Status](https://gemnasium.com/badges/github.com/Stargator/void-jekyll-theme.svg)](https://gemnasium.com/github.com/Stargator/void-jekyll-theme)
-
 # void-jekyll-theme
 
 void-jekyll-theme is a theme, for Jekyll. It's pretty much empty of all color. 

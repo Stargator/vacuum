@@ -1,0 +1,4 @@
+name: "Void CodeQL Config"
+
+paths:
+  - assets/javascript

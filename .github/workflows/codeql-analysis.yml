@@ -1,4 +1,4 @@
-name: "CodeQL"
+name: "CodeQL Scan"
 
 on:
   push:
@@ -6,6 +6,21 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [develop]
+    paths-ignore:
+      - '.gitignore'
+      - '.ruby-version'
+      - 'Gemfile*'
+      - 'LICENSE'
+      - 'Rakefile'
+      - '*.gemspec'
+      - '*.md'
+      - '*.txt'
+      - '*.yml'
+      - '_*/'
+      - 'blog/'
+      - 'examples/'
+      - 'assets/css/'
+      - 'assets/images/'
   schedule:
     - cron: '0 23 * * 5'
 
@@ -35,7 +50,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
-        paths: "assets/javascript"
+        config-file: './.github/codeql/codeql-config.yml'
         languages: ${{ matrix.language }}
 
     - name: Perform CodeQL Analysis

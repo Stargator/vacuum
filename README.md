@@ -19,7 +19,23 @@ Screenshots
 ![Article Page](/examples/article.png)
 
 ## Usage
-```gem install void-jekyll-theme```
+1. Add it to your Gemfile:
+
+```
+gem 'void-jekyll-theme'
+```
+
+2. Then add it to your Jekyll _config.yml:
+
+```yaml
+theme: void-jekyll-theme
+```
+
+3. Run `bundle install` to download the theme's gem
+
+4. Run `bundle exec jeyll serve` to see the theme in action
+
+In the example _config.yml below, there's a list of _config.yml parameters that the theme uses in the layouts/templates.
 
 Example _config.yml
 ----------------------

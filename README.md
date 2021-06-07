@@ -57,9 +57,6 @@ creator: 'Example Author Name'
 avatar_path: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
 avatar_description: # This is my avatar
 
-# Favicon for the website's tab
-favicon: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
-
 # Declares the theme for the Jekyll site
 theme: void-jekyll-theme
 

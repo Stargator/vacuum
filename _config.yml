@@ -21,7 +21,6 @@ copyright-start-year: 2015
 # Icon settings
 logo: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
 logo-description: "This is the site's logo"
-favicon: /assets/images/favicon.ico
 
 # Build Settings
 ## Conversion
@@ -79,6 +78,7 @@ exclude:
   - /*.txt
   - /*.yml
   - .bowerrc
+  - ./favicon.ico
   - Gemfile
   - LICENSE
   - Rakefile

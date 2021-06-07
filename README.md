@@ -42,32 +42,29 @@ Example _config.yml
 ```yaml
 # Name of your site (displayed in the header)
 name: 'Example Void Theme'
-title: "Example: What is the title of your site?"
+title: "Example of Void Jekyll Theme"
+short_title: "Void"
 
 # Short bio or description (displayed in the header)
 description: "Lorem Ipsum something about your site and you too probably."
 timezone: America\New_York
+copyright_start_year: 2015
 
 # Creator settings
 creator: 'Example Author Name'
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 #  '/theme/images/avatar.jpg'
 avatar_path: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
-avatar_description: # This is my avatar"
+avatar_description: # This is my avatar
 
-# Build Settings
-## Conversion
-markdown: kramdown
-highlighter: coderay
+# Favicon for the website's tab
+favicon: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
+
+# Declares the theme for the Jekyll site
 theme: void-jekyll-theme
 
 ## Handling Reading
-safe: false
 encoding: "utf-8"
-
-## Filtering Content
-limit_posts: 4
-permalink: /:title/
 
 # Your website URL (e.g. http://user.github.io)
 # Used for Sitemap.xml and your RSS feed
@@ -76,16 +73,7 @@ url: "http://www.example.com" # the base hostname & protocol for your site
 # (http://username.github.io/repository-name)
 # and NOT the User repository (http://username.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "" # the subpath of the site, e.g. /blog/
-
-# Front Matter Defaults
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      author: {{ site.creator}}
+baseurl: "" # The sub-path of the site, e.g. /blog/
 
 # About Page Info
 about_page_header: "About Page Header"
@@ -95,24 +83,16 @@ center_image: "images/image.jpg"
 # Flags below are optional
 #
 
-# List of links for navigation
-navigation: [
-    # You probably want to fill these in so they point to your user pages
-    {'site': 'flickr', 'user': '', 'url': 'http://www.flickr.com/...'},
-    {'site': 'github', 'user': '', 'url': 'https://github.com/...'},
-    {'site': 'google-plus', 'user': '', 'url': 'https://plus.google.com/...'},
-    {'site': 'instagram', 'user': '', 'url': 'http://www.instagram.com/user/...'},
-    {'site': 'lastfm', 'user': '', 'url': 'http://www.last.fm/user/...'},
-    {'site': 'linkedin', 'user': '', 'url': 'http://linkedin.com/in/...'},
-    {'site': 'pinterest', 'user': '', 'url': 'http://www.pinterest.com/...'},
-    {'site': 'spotify', 'user': '', 'url': 'https://open.spotify.com/user/...'},
-    {'site': 'stackoverflow', 'user': '', 'url': 'http://www.stackoverflow.com/user/...'},
-    {'site': 'twitter', 'user': '', 'url': 'https://twitter.com/...'}
-]
+footer-links:
+  - github_username: 'github'
+  - linkedin_url: 'https://linkedin.com/in/username'
+  - twitter_id: 'github'
+  - twitter_username: 'github'
 
 show_social:
   facebook: false
   twitter: false
+  hacker_news: false
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -121,14 +101,10 @@ show_social:
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 #google_analytics:
 
-# Feed Settings
-feed:
-  main: /feed/feed.xml
-  tag:  /feed/tag/%s.atom.xml
 ```
 
 ## Contributing
-If you are interested in contributing, you will need Ruby 2.6 installed as well as bundler.
+If you are interested in contributing, you will need Ruby 2.7 installed as well as `bundler`.
 
 It is recommended that you install the dependencies into a local path: `vendor/bundle`
 

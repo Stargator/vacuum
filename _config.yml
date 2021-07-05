@@ -51,7 +51,7 @@ assets:
     - assets/css
     - assets/fonts
     - assets/images
-    - assets/javascripts
+    - assets/javascript
     - assets/stylesheets
 
 ## Where things are

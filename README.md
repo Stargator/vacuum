@@ -57,6 +57,11 @@ creator: 'Example Author Name'
 avatar_path: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
 avatar_description: # This is my avatar
 
+# Icon settings
+logo: https://avatars3.githubusercontent.com/u/9919
+logo_description: "This is the site's logo"
+favicon: 'favicon.ico' # Just the filename and extension, void assumes it's in the root directory
+
 # Declares the theme for the Jekyll site
 theme: void-jekyll-theme
 

@@ -21,6 +21,7 @@ copyright_start_year: 2015
 # Icon settings
 logo: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
 logo_description: "This is the site's logo"
+favicon: 'favicon.ico' # Just the filename and extension, void assumes it's in the root directory
 
 # Build Settings
 ## Conversion

@@ -6,7 +6,7 @@
 # Name of your site (displayed in the header)
 name: 'Example Void Theme'
 title: "Example: What is the title of your site?"
-short-title: "Site Title"
+short_title: "Site Title"
 
 # Short bio or description (displayed in the header)
 description: "Lorem Ipsum something about your site and you too probably."
@@ -16,11 +16,11 @@ timezone: America\New_York
 creator: 'Example Author Name'
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 #  '/theme/images/avatar.jpg'
-copyright-start-year: 2015
+copyright_start_year: 2015
 
 # Icon settings
 logo: https://avatars3.githubusercontent.com/u/9919?v=3&s=200
-logo-description: "This is the site's logo"
+logo_description: "This is the site's logo"
 
 # Build Settings
 ## Conversion
@@ -166,7 +166,6 @@ navigation: [
     # You probably want to fill these in so they point to your user pages
     {'site': 'flickr', 'user': '', 'url': 'http://www.flickr.com/...'},
     {'site': 'github', 'user': '', 'url': 'https://github.com/...'},
-    {'site': 'google-plus', 'user': '', 'url': 'https://plus.google.com/...'},
     {'site': 'instagram', 'user': '', 'url': 'http://www.instagram.com/user/...'},
     {'site': 'lastfm', 'user': '', 'url': 'http://www.last.fm/user/...'},
     {'site': 'linkedin', 'user': '', 'url': 'http://linkedin.com/in/...'},
@@ -181,17 +180,17 @@ show_social:
   twitter: false
 
 # TODO Includes an icon in the footer for each username you enter
-footer-links:
+footer_links:
 #  email: "example@mail.net"
 #  facebook_id:
 #  flickr_id:
-#  github_id:
+#  github_username:
 #  instagram_id:
-#  linkedin_url:
+#  linkedin_id:
 #  pinterest_id:
 #  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
 #  stackoverflow_url: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-#  twitter_id:
+#  twitter_username:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account

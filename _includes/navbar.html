@@ -20,9 +20,9 @@
           </a>
         </li>
         {% endif %}
-        {% if site.footer_links.linkedin_url %}
+        {% if site.footer_links.linkedin_id %}
         <li>
-          <a class="icon" href="{{ site.footer_links.linkedin_url }}" title="LinkedIn">
+          <a class="icon" href="https://www.linkedin.com/in/{{ site.footer_links.linkedin_id }}/" title="LinkedIn">
             <em class="fa fa-fw fa-linkedin"></em>
           </a>
         </li>
@@ -36,7 +36,7 @@
         {% endif %}
         {% if site.feed.path %}
         <li>
-          <a class="icon" href="{{ site.url }}/{{ site.feed.path }}" title="Subscribe (Atom)">
+          <a class="icon" href="{{ site.feed.path }}" title="Subscribe (Atom)">
             <em class="fa fa-fw fa-rss"></em>
           </a>
         </li>

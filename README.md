@@ -81,10 +81,9 @@ center_image: "images/image.jpg"
 #
 
 footer-links:
-  - github_username: 'github'
-  - linkedin_url: 'https://linkedin.com/in/username'
-  - twitter_id: 'github'
-  - twitter_username: 'github'
+  - github_username: 'githubPro'
+  - linkedin_id: 'username' # Appears in the URL of your profile: https://linkedin.com/in/username
+  - twitter_username: 'twitterZed'
 
 show_social:
   facebook: false

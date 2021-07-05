@@ -102,7 +102,7 @@ show_social:
 ## Contributing
 If you are interested in contributing, you will need Ruby 2.7 installed as well as `bundler`.
 
-It is recommended that you install the dependencies into a local path: `vendor/bundle`
+I recommend that you install the dependencies into a local path: `vendor/bundle`
 
 To do so run this command: ```bundle config set path 'vendor/bundle'```. Before running `bundle install`.
 

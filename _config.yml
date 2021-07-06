@@ -176,7 +176,7 @@ navigation: [
     {'site': 'twitter', 'user': '', 'url': 'https://twitter.com/...'}
 ]
 
-show_social:
+embed_social_metadata:
   facebook: false
   twitter: false
 

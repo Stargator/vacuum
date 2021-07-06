@@ -39,7 +39,7 @@
   <link rel="alternate" type="application/atom+xml" href="{{ site.feed.path }}" title="{{ site.title }} Full Atom Feed">
   {% endif %}
 
-  {% if site.show_social.twitter %}
+  {% if site.embed_social_metadata.twitter %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.footer_links.twitter_username }}">
     <meta name="twitter:creator" content="@{{ site.footer_links.twitter_username }}">
@@ -88,20 +88,20 @@
 
 </body> <!-- End body -->
 
-{% if site.show_social.twitter %}
+{% if site.embed_social_metadata.twitter %}
 <!-- twitter.js
 ==================================================================== -->
 <script type="text/javascript" src="../assets/javascript/load-twitter.js"></script>
 {% endif %}
 
-{% if site.show_social.facebook %}
+{% if site.embed_social_metadata.facebook %}
 <!-- Facebook SDK for JS
 ==================================================================== -->
 <div id="fb-root"></div>
 <script type="text/javascript" src="../assets/javascript/load-facebook.js"></script>
 {% endif %}
 
-{% if site.show_social.hacker_news %}
+{% if site.embed_social_metadata.hacker_news %}
 <!-- Hacker News Share
 ==================================================================== -->
 <script type="text/javascript" src="../assets/javascript/load-hacker-news.js"></script>

@@ -20,7 +20,7 @@ layout: base
     </p>
 </header>
 
-{% if site.show_social.facebook %}
+{% if site.embed_social_metadata.facebook %}
 	<!-- Facebook Open Graph
   ================================================== -->
   <meta property="og:type" content="website">
@@ -31,7 +31,7 @@ layout: base
   <meta property="og:image" content="{{ site.url }}{{ site.logo }}">
 {% endif %}
 
-{% if site.show_social.twitter %}
+{% if site.embed_social_metadata.twitter %}
   <!-- Twitter Cards
   ================================================== -->
   <meta name="twitter:card" content="summary">
@@ -65,7 +65,7 @@ layout: base
   <hr class="small"/>
   <div class="article-sharing">
       <ul>
-      {% if site.show_social.twitter %}
+      {% if site.embed_social_metadata.twitter %}
       <!-- Twitter Sharing
       ================================================================== -->
       <li>
@@ -75,7 +75,7 @@ layout: base
       </li>
       {% endif %}
 
-      {% if site.show_social.facebook %}
+      {% if site.embed_social_metadata.facebook %}
       <!-- Facebook Sharing
       ================================================================== -->
       <li><div class="fb-share-button"
@@ -84,7 +84,7 @@ layout: base
       </div></li>
       {% endif %}
 
-      {% if site.show_social.hacker_news %}
+      {% if site.embed_social_metadata.hacker_news %}
       <!-- Hacker NewsSharing
       ================================================================== -->
       <li>

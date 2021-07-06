@@ -90,7 +90,7 @@ footer-links:
   - linkedin_id: 'username' # Appears in the URL of your profile: https://linkedin.com/in/username
   - twitter_username: 'twitterZed'
 
-show_social:
+embed_social_metadata:
   facebook: false
   twitter: false
   hacker_news: false
